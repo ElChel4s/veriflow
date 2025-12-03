@@ -2,56 +2,57 @@
 
 Un sistema integral de gestión de proyectos diseñado específicamente para equipos de aseguramiento de la calidad, construido con React, Next.js 16, TypeScript y Tailwind CSS.
 
-## Features
 
-### 1. Authentication & User Management
-- Simple login without initial roles
-- Unique user codes for project invitations
-- Role assignment occurs at the project level (ORGANIZADOR, EJECUTOR, QA)
+## Características
 
-### 2. Projects Management
-- Create and manage multiple QA projects
-- Project settings and configuration
-- Team member management with role assignment
-- Add members using unique user codes
-- Progress tracking per project
+### 1. Autenticación y gestión de usuarios
+- Inicio de sesión sencillo sin roles iniciales
+- Códigos únicos de usuario para invitaciones a proyectos
+- La asignación de roles ocurre a nivel de proyecto (ORGANIZADOR, EJECUTOR, QA)
 
-### 3. Task Management Workspace
-- **Kanban Board**: Visual task workflow through 7 states
-  - Backlog
-  - Assigned
-  - In Progress
-  - Pending QA
-  - In Review
-  - Needs Correction
-  - Completed
-- Task priority levels (Low, Medium, High, Critical)
-- Task list view
-- Calendar integration
+### 2. Gestión de proyectos
+- Crear y gestionar múltiples proyectos de QA
+- Configuración y ajustes por proyecto
+- Gestión de miembros del equipo con asignación de roles
+- Añadir miembros usando códigos de usuario únicos
+- Seguimiento del progreso por proyecto
 
-### 4. Quality Assurance Workflow
-- **Executor Delivery**: Submit work with summary and technical details
-- **QA Review**: Approve or reject with feedback
-- **Correction Handling**: Clear feedback for needed changes
-- Delivery history and timeline
+### 3. Espacio de trabajo de tareas
+- **Tablero Kanban**: Flujo visual de tareas a través de 7 estados
+   - Backlog
+   - Asignada
+   - En Progreso
+   - Pendiente QA
+   - En Revisión
+   - Necesita Corrección
+   - Completada
+- Niveles de prioridad de tareas (Baja, Media, Alta, Crítica)
+- Vista de lista de tareas
+- Integración con calendario
 
-### 5. File Management
-- Attach files to tasks (Request and Delivery Evidence contexts)
-- File repository view
-- Upload and download capabilities
+### 4. Flujo de aseguramiento de calidad
+- **Entrega del Ejecutor**: Enviar trabajo con resumen y detalles técnicos
+- **Revisión QA**: Aprobar o rechazar con retroalimentación
+- **Manejo de correcciones**: Retroalimentación clara para cambios necesarios
+- Historial de entregas y línea de tiempo
 
-### 6. Theme System
-- Configurable primary colors
-- Options: Neutral, Corporate Blue, Forest Green, Violet
-- Semantic colors for status (Red: Error, Green: Success, Amber: Warning)
-- Dark mode support
+### 5. Gestión de archivos
+- Adjuntar archivos a las tareas (contextos: Solicitud y Evidencia de Entrega)
+- Vista de repositorio de archivos
+- Capacidades de subida y descarga
 
-### 7. Role-Based Views
-- **Organizador**: Create projects, assign tasks, manage team
-- **Ejecutor**: Complete assigned tasks and submit work
-- **QA**: Review deliverables and approve/reject work
+### 6. Sistema de temas
+- Colores primarios configurables
+- Opciones: Neutral, Azul Corporativo, Verde Bosque, Violeta
+- Colores semánticos para estados (Rojo: Error, Verde: Éxito, Ámbar: Aviso)
+- Soporte para modo oscuro
 
-## Project Structure
+### 7. Vistas por rol
+- **Organizador**: Crear proyectos, asignar tareas, gestionar el equipo
+- **Ejecutor**: Completar tareas asignadas y enviar entregas
+- **QA**: Revisar entregables y aprobar/rechazar
+
+## Estructura del proyecto
 
 \`\`\`
 app/
@@ -95,98 +96,98 @@ components/
 globals.css                       # Design tokens and theme configuration
 \`\`\`
 
-## Database Alignment
+## Alineación con la base de datos
 
-The system follows the exact database schema provided:
-- `usuarios`: User accounts
-- `proyectos`: Projects
-- `miembros_proyecto`: Team members with roles per project
-- `tareas`: Tasks with solicitante, ejecutor, qa_id
-- `entregas_tarea`: Delivery submissions with version tracking
-- `revisiones_qa`: QA reviews with verdicts
-- `adjuntos`: File attachments with context
+El sistema sigue el esquema de base de datos propuesto:
+- `usuarios`: Cuentas de usuario
+- `proyectos`: Proyectos
+- `miembros_proyecto`: Miembros del proyecto con roles por proyecto
+- `tareas`: Tareas con solicitante, ejecutor, qa_id
+- `entregas_tarea`: Entregas con seguimiento de versiones
+- `revisiones_qa`: Revisiones QA con veredictos
+- `adjuntos`: Archivos adjuntos con contexto
 
-## Design System
+## Sistema de diseño
 
-### Color Tokens
-- **Primary**: Configurable (default: neutral)
-- **Semantic Colors**: Fixed for status indication
-- **Priority Badges**: Low (Gray), Medium (Blue), High (Orange), Critical (Red)
-- **Task Status**: 7 distinct colors for clear workflow visibility
+### Tokens de color
+- **Primario**: Configurable (por defecto: neutral)
+- **Colores semánticos**: Fijos para indicar estados
+- **Badges de prioridad**: Baja (Gris), Media (Azul), Alta (Naranja), Crítica (Rojo)
+- **Estados de tarea**: 7 colores distintos para visibilidad del flujo
 
-### Typography
-- Font: Geist (sans-serif)
-- Hierarchy: Clear heading-to-body relationships
-- Line heights optimized for readability
+### Tipografía
+- Fuente: Geist (sans-serif)
+- Jerarquía: Relación clara entre títulos y cuerpo
+- Alturas de línea optimizadas para legibilidad
 
-### Layout
-- Flexbox-first approach
-- Sidebar + Main content layout
-- Responsive grid systems
-- Minimum 80% sheet width for detail panels
+### Diseño y maquetación
+- Enfoque basado en Flexbox
+- Layout con sidebar + contenido principal
+- Sistemas de grid responsivos
+- Ancho mínimo del panel de detalle del 80%
 
-## Getting Started
+## Cómo empezar
 
-1. **Install dependencies**:
-   \`\`\`bash
+1. **Instalar dependencias**:
+   ```bash
    npm install
-   \`\`\`
+   ```
 
-2. **Run development server**:
-   \`\`\`bash
+2. **Ejecutar servidor de desarrollo**:
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
-3. **Open in browser**:
-   Navigate to `http://localhost:3000`
+3. **Abrir en el navegador**:
+   Accede a `http://localhost:3000`
 
-4. **Inicio de Demo**:
+4. **Inicio de demo**:
    - Correo: demo@veriflow.com
    - Contraseña: demo123
 
-## Key Workflows
+## Flujos principales
 
-### Creating a Project
-1. Navigate to Projects
-2. Click "New Project"
-3. Add project name and description
-4. Add team members using their user codes
-5. Assign roles to each member
-6. Confirm creation
+### Crear un proyecto
+1. Ir a Proyectos
+2. Hacer clic en "Nuevo Proyecto"
+3. Añadir nombre y descripción del proyecto
+4. Agregar miembros usando sus códigos de usuario
+5. Asignar roles a cada miembro
+6. Confirmar la creación
 
-### Creating and Assigning Tasks
-1. Enter workspace
-2. Click "New Task"
-3. Fill task details (no executor assignment yet)
-4. Save task (goes to Backlog)
-5. Organizador reviews unassigned tasks
-6. Assign to Executor via task detail
+### Crear y asignar tareas
+1. Entrar al espacio de trabajo
+2. Hacer clic en "Nueva Tarea"
+3. Completar los detalles de la tarea (sin asignar ejecutor inicialmente)
+4. Guardar la tarea (va a Backlog)
+5. El Organizador revisa las tareas sin asignar
+6. Asignar al Ejecutor desde el detalle de la tarea
 
-### Completing Quality Workflow
-1. **Executor**: Task assigned → completes work → submits delivery
-2. **QA**: Receives delivery → reviews → approves or rejects
-3. **Executor** (if rejected): Makes corrections → resubmits
-4. **System**: Task moves to Completed when approved
+### Completar el flujo de QA
+1. **Ejecutor**: Tarea asignada → completa el trabajo → envía entrega
+2. **QA**: Recibe la entrega → revisa → aprueba o rechaza
+3. **Ejecutor** (si es rechazado): Realiza correcciones → reenvía
+4. **Sistema**: La tarea pasa a Completada cuando se aprueba
 
-## Technology Stack
+## Stack tecnológico
 
-- **Frontend Framework**: React 19.2 with Next.js 16
-- **Styling**: Tailwind CSS v4
-- **UI Components**: Shadcn/UI
-- **Icons**: Lucide React
-- **Charts**: Recharts
-- **State Management**: React Context
-- **Theme System**: CSS Variables with data attributes
+- **Framework frontend**: React 19.2 con Next.js 16
+- **Estilos**: Tailwind CSS v4
+- **Componentes UI**: Shadcn/UI
+- **Iconos**: Lucide React
+- **Gráficas**: Recharts
+- **Gestión de estado**: React Context
+- **Sistema de temas**: Variables CSS con atributos de datos
 
-## Architecture Highlights
+## Aspectos destacados de la arquitectura
 
-- **Theme Provider**: Global theme context with localStorage persistence
-- **Role Indicator**: Dynamic role switching for testing different perspectives
-- **Responsive Design**: Mobile-first approach with proper breakpoints
-- **Accessibility**: ARIA labels and semantic HTML throughout
-- **Performance**: Optimized re-renders with proper memoization
+- **Theme Provider**: Contexto global de tema con persistencia en localStorage
+- **Role Indicator**: Cambio dinámico de rol para probar diferentes perspectivas
+- **Diseño responsivo**: Enfoque mobile-first con puntos de quiebre adecuados
+- **Accesibilidad**: Etiquetas ARIA y HTML semántico en toda la app
+- **Rendimiento**: Re-renderizados optimizados mediante memoización adecuada
 
 ---
 
-Built with ♥ for QA Teams
+Construido con ♥ para equipos de QA
 </parameter>
